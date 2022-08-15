@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/bulma.css" rel="stylesheet">
+    <script src="./js/truco.js"></script>
+    <title>Truco</title>
+</head>
+
+<body>
+    <div class="box is-centered is-11">
+        <div class="columns" id="puntos1" style="background-color: rgb(245, 235, 235); height: 500px; width: 500px;">
+            <div class="column is-half" style="background-color: black; background-size: 12% 25%">
+                <img style="margin:5px;" id="ptos1-1" src="./img/0 porotos.jpg" alt="">
+                <img style="margin:5px;" id="ptos2-1" src="./img/0 porotos.jpg" alt="">
+                <img style="margin:5px;" id="ptos3-1" src="./img/0 porotos.jpg" alt="">
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="is-centered is-10">
+                            <button onclick="sumarPorotos()">Sumar</button>
+                        </div>
+                    </div>
+                    <div class="column is-centered is-half">
+                        <div class="is-centered is-10">
+                            <button onclick="restarPorotos()">Restar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column is half" style="background-color: black; background-size: 12% 25%">
+                <img style="margin:5px;" id="ptos1-2" src="./img/0 porotos.jpg" alt="">
+                <img style="margin:5px;" id="ptos2-2" src="./img/0 porotos.jpg" alt="">
+                <img style="margin:5px;" id="ptos3-2" src="./img/0 porotos.jpg" alt="">
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="is-centered is-10">
+                            <button onclick="sumarPorotosE()">Sumar</button>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="is-centered is-10">
+                            <button onclick="restarPorotosE()">Restar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
