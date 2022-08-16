@@ -73,10 +73,12 @@ function sumarPorotos() {
 
 function restarPorotos() {
     ptosNosotros -= 1
-
+    if (ptosNosotros <0) {
+        ptosNosotros=0
+    }
     switch (ptosNosotros) {
         case 0:
-            document.getElementById('ptos1-1').src = './img/0 porotos.png';
+            document.getElementById('ptos1-1').src = './img/0 porotos.jpg';
 
             break;
         case 1:
@@ -219,10 +221,13 @@ function sumarPorotosE() {
 
 function restarPorotosE() {
     ptosEllos -= 1
+    if (ptosEllos <0) {
+        ptosEllos=0
+    }
 
     switch (ptosEllos) {
         case 0:
-            document.getElementById('ptos1-2').src = './img/0 porotos.png';
+            document.getElementById('ptos1-2').src = './img/0 porotos.jpg';
 
             break;
         case 1:
