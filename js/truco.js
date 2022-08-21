@@ -297,3 +297,11 @@ function restarPorotosE() {
     }
 
 }
+
+function aJugar() {
+    document.getElementById("elegirParticipantes").style.visibility="hidden ";
+    document.getElementById("elegirParticipantes").style.display="none";
+    document.getElementById("tablero").style.visibility="visible";
+    document.getElementById("tablero").style.display="flex"
+
+}
