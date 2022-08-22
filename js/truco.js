@@ -1,6 +1,11 @@
 let ptosNosotros = 0
 let ptosEllos=0
 
+var diego="n"
+var bombita="n"
+var mono="n"
+var carlo="n"
+
 function sumarPorotos() {
     ptosNosotros += 1
 
@@ -304,4 +309,43 @@ function aJugar() {
     document.getElementById("tablero").style.visibility="visible";
     document.getElementById("tablero").style.display="flex"
 
+}
+function elijoDiego (){
+    if (diego=="s") {
+        document.getElementById("fDiego").src='./img/Diego3.jpg'
+        diego="n"
+    } else {
+        document.getElementById("fDiego").src='./img/DiegoSel.jpg'
+        diego="s"
+    }
+}
+
+function elijoMono (){
+    if (mono=="s") {
+        document.getElementById("fMono").src='./img/Mono3.jpg'
+        mono="n"
+    } else {
+        document.getElementById("fMono").src='./img/MonoSel.jpg'
+        mono="s"
+    }
+}
+
+function elijobombita (){
+    if (bombita=="s") {
+        document.getElementById("fBombita").src='./img/bombita3.jpg'
+        bombita="n"
+    } else {
+        document.getElementById("fBombita").src='./img/bombitaSel.jpg'
+        bombita="s"
+    }
+}
+
+function elijoCarlo (){
+    if (carlo=="s") {
+        document.getElementById("fCarlo").src='./img/carlo3.jpg'
+        carlo="n"
+    } else {
+        document.getElementById("fCarlo").src='./img/carloSel.jpg'
+        carlo="s"
+    }
 }
