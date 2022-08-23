@@ -332,7 +332,7 @@ function elijoMono (){
 
 function elijobombita (){
     if (bombita=="s") {
-        document.getElementById("fBombita").src='./img/bombita3.jpg'
+        document.getElementById("fBombita").src='./img/Bombita3.jpg'
         bombita="n"
     } else {
         document.getElementById("fBombita").src='./img/bombitaSel.jpg'
@@ -342,7 +342,7 @@ function elijobombita (){
 
 function elijoCarlo (){
     if (carlo=="s") {
-        document.getElementById("fCarlo").src='./img/carlo3.jpg'
+        document.getElementById("fCarlo").src='./img/Carlo3.jpg'
         carlo="n"
     } else {
         document.getElementById("fCarlo").src='./img/carloSel.jpg'
