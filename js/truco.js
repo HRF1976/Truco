@@ -5,6 +5,13 @@ var diego="n"
 var bombita="n"
 var mono="n"
 var carlo="n"
+var maga="n"
+var adri="n"
+var ringo="n"
+var lau="n"
+var yo="n"
+var nari=""
+
 
 function sumarPorotos() {
     ptosNosotros += 1
@@ -347,5 +354,65 @@ function elijoCarlo (){
     } else {
         document.getElementById("fCarlo").src='./img/carloSel.jpg'
         carlo="s"
+    }
+}
+
+function elijoMaga (){
+    if (maga=="s") {
+        document.getElementById("fMaga").src='./img/Maga.jpg'
+        maga="n"
+    } else {
+        document.getElementById("fMaga").src='./img/MagaSel.jpg'
+        maga="s"
+    }
+}
+
+function elijoAdri (){
+    if (adri=="s") {
+        document.getElementById("fAdri").src='./img/Adri.jpg'
+        adri="n"
+    } else {
+        document.getElementById("fAdri").src='./img/AdriSel.jpg'
+        adri="s"
+    }
+}
+
+function elijoLau (){
+    if (lau=="s") {
+        document.getElementById("fLau").src='./img/Lau3.jpg'
+    lau="n"
+    } else {
+        document.getElementById("fLau").src='./img/LauSel.jpg'
+        lau="s"
+    }
+}
+
+function elijoRingo (){
+    if (ringo=="s") {
+        document.getElementById("fRingo").src='./img/Ringo3.jpg'
+        ringo="n"
+    } else {
+        document.getElementById("fRingo").src='./img/RingoSel.jpg'
+        ringo="s"
+    }
+}
+
+function elijoNari (){
+    if (nari=="s") {
+        document.getElementById("fNari").src='./img/Nari3.jpg'
+        nari="n"
+    } else {
+        document.getElementById("fNari").src='./img/NariSel.jpg'
+        nari="s"
+    }
+}
+
+function elijoYo (){
+    if (yo=="s") {
+        document.getElementById("fYo").src='./img/Yo3.jpg'
+        yo="n"
+    } else {
+        document.getElementById("fYo").src='./img/YoSel.jpg'
+        yo="s"
     }
 }
