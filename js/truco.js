@@ -314,9 +314,18 @@ function aJugar() {
     document.getElementById("elegirParticipantes").style.visibility="hidden ";
     document.getElementById("elegirParticipantes").style.display="none";
     document.getElementById("tablero").style.visibility="visible";
-    document.getElementById("tablero").style.display="flex"
+    document.getElementById("tablero").style.display="block"
 
 }
+
+function irAFotos(){
+    document.getElementById("inicio").style.visibility="hidden ";
+    document.getElementById("inicio").style.display="none";
+    document.getElementById("elegirParticipantes").style.visibility="visible ";
+    document.getElementById("elegirParticipantes").style.display= "block" ;
+
+}
+
 function elijoDiego (){
     if (diego=="s") {
         document.getElementById("fDiego").src='./img/Diego3.jpg'
