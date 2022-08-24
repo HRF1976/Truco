@@ -11,7 +11,31 @@
 </head>
 
 <body>
-    <div id="elegirParticipantes" class="box is-centered is-mobile is-10">
+    <div id="inicio">
+        <div class="level has-text-white has-text-weight-semibold p-5 mb-3" style="background-color:darkblue ;">
+
+            <p class="is-size-3 pl-4">
+                re T R U C O
+            </p>
+        </div>
+
+        <hr>
+        <div class="column is-10">
+            <div class="box">
+                <section id="Leyes">
+                    <div class="hero is-small is-info" style="padding: 5px;">
+                        <p class="title">Elegir Participantes</p>
+
+                        
+                    </div>
+
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="elegirParticipantes" class="box is-centered is-mobile is-10" style="display: none; visibility:hidden">
         <div class="columns is-mobile">
             <div class="column is-mobile is-one-quarter">
                 <img id="fAdri" src="./img/Adri.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
@@ -56,8 +80,8 @@
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoNari()">
             </div>
             <div class="column is-mobile is-one-quarter">
-                <img id="fYo" src="./img/Yo3.jpg" alt=""
-                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoYo()">
+                <img id="fYo" src="./img/Yo3.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
+                    onclick="elijoYo()">
             </div>
 
 
@@ -66,10 +90,10 @@
 
 
 
+        <button onclick="aJugar()">Listo!</button>
+    </div>
 
-    </div>
-    <button onclick="aJugar()">Listo!</button>
-    </div>
+
 
     <div id="tablero" class="box is-centered is-mobile is-10" style="visibility:hidden; display:none">
         <div class="columns is-mobile is-centered" id="puntos1" style="background-color: rgb(245, 235, 235);">
