@@ -1,5 +1,7 @@
 let ptosNosotros = 0
 let ptosEllos=0
+let brutoNos=0
+let brutoEllos=0
 
 var diego="n"
 var bombita="n"
@@ -10,16 +12,22 @@ var adri="n"
 var ringo="n"
 var lau="n"
 var yo="n"
-var nari=""
+var nari="n"
 
 
 function sumarPorotos() {
     ptosNosotros += 1
+    brutoNos+=1
+
+    if (brutoNos>15) {
+        ptosNosotros=brutoNos-15
+    }
 
     switch (ptosNosotros) {
         case 1:
             document.getElementById('ptos1-1').src = './img/1 poroto.png';
-
+            document.getElementById('ptos2-1').src = './img/0 porotos.jpg';
+            document.getElementById('ptos3-1').src = './img/0 porotos.jpg';
             break;
         case 2:
             document.getElementById('ptos1-1').src = './img/2 porotos.jpg';
@@ -56,7 +64,7 @@ function sumarPorotos() {
             break;
         case 10:
             document.getElementById('ptos2-1').src = './img/5 porotos.jpg';
-
+            
             break;
         case 11:
             document.getElementById('ptos3-1').src = './img/1 poroto.png';
@@ -81,12 +89,23 @@ function sumarPorotos() {
         default:
             break;
     }
+    if (brutoNos<16) {
+        document.getElementById("marcadorPtosN").textContent=ptosNosotros+" Malas"
+    } else {
+        document.getElementById("marcadorPtosN").textContent=(ptosNosotros) +" Buenas"
+    }
 }
 
 function restarPorotos() {
     ptosNosotros -= 1
+    brutoNos-=1
     if (ptosNosotros <0) {
         ptosNosotros=0
+    }
+    if (brutoNos>15) {
+        ptosNosotros=brutoNos-15
+    } else {
+        ptosNosotros=brutoNos
     }
     switch (ptosNosotros) {
         case 0:
@@ -152,22 +171,34 @@ function restarPorotos() {
             break;
         case 15:
             document.getElementById('ptos3-1').src = './img/5 porotos.jpg';
-
+            document.getElementById('ptos2-1').src = './img/5 porotos.jpg';
+            document.getElementById('ptos1-1').src = './img/5 porotos.jpg';
             break;
 
         default:
             break;
+    }
+    if (brutoNos<16) {
+        document.getElementById("marcadorPtosN").textContent=ptosNosotros+" Malas"
+    } else {
+        document.getElementById("marcadorPtosN").textContent=(ptosNosotros) +" Buenas"
     }
 
 }
 
 function sumarPorotosE() {
     ptosEllos += 1
+    brutoEllos+=1
+
+    if (brutoEllos>15) {
+        ptosEllos=brutoEllos-15
+    }
 
     switch (ptosEllos) {
         case 1:
             document.getElementById('ptos1-2').src = './img/1 poroto.png';
-
+            document.getElementById('ptos2-2').src = './img/0 porotos.jpg';
+            document.getElementById('ptos3-2').src = './img/0 porotos.jpg';
             break;
         case 2:
             document.getElementById('ptos1-2').src = './img/2 porotos.jpg';
@@ -204,7 +235,7 @@ function sumarPorotosE() {
             break;
         case 10:
             document.getElementById('ptos2-2').src = './img/5 porotos.jpg';
-
+            
             break;
         case 11:
             document.getElementById('ptos3-2').src = './img/1 poroto.png';
@@ -229,14 +260,24 @@ function sumarPorotosE() {
         default:
             break;
     }
+    if (brutoEllos<16) {
+        document.getElementById("marcadorPtosE").textContent=ptosEllos+" Malas"
+    } else {
+        document.getElementById("marcadorPtosE").textContent=(ptosEllos) +" Buenas"
+    }
 }
 
 function restarPorotosE() {
     ptosEllos -= 1
+    brutoEllos-=1
     if (ptosEllos <0) {
         ptosEllos=0
     }
-
+    if (brutoEllos>15) {
+        ptosEllos=brutoEllos-15
+    } else {
+        ptosEllos=brutoEllos
+    }
     switch (ptosEllos) {
         case 0:
             document.getElementById('ptos1-2').src = './img/0 porotos.jpg';
@@ -301,11 +342,17 @@ function restarPorotosE() {
             break;
         case 15:
             document.getElementById('ptos3-2').src = './img/5 porotos.jpg';
-
+            document.getElementById('ptos2-2').src = './img/5 porotos.jpg';
+            document.getElementById('ptos1-2').src = './img/5 porotos.jpg';
             break;
 
         default:
             break;
+    }
+    if (brutoEllos<16) {
+        document.getElementById("marcadorPtosE").textContent=ptosEllos+" Malas"
+    } else {
+        document.getElementById("marcadorPtosE").textContent=(ptosEllos) +" Buenas"
     }
 
 }
