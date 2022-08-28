@@ -14,6 +14,16 @@ var lau="n"
 var yo="n"
 var nari="n"
 
+window.onload = function(){
+    $("#quiero").animate({
+        opacity: '1'
+        
+      },"slow");
+      $("#veinte").animate({
+        opacity: '1'
+        
+      },4000);
+}
 
 function sumarPorotos() {
     ptosNosotros += 1
