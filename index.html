@@ -8,19 +8,22 @@
     <link href="./css/bulma.css" rel="stylesheet">
     <script src="./js/truco.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Truco</title>
 </head>
 
 <body>
     <div id="inicio">
-        <div class="level has-text-white has-text-weight-semibold p-5 mb-3" style="background-color:rgb(29, 29, 71) ;">
-        
-            <p id="quiero" class="puntaje" style="opacity: 0; size: 100px;">
-                Quiero!
-            </p>
-        
-            <p id="veinte" class="puntaje" style="opacity: 0;" >20...</p>
-        
+        <div class="level has-text-white has-text-weight-semibold p-5 mb-3 columns"
+            style="background-color:rgb(29, 29, 71) ;">
+            <div class="column is-2">
+                <p id="quiero" class="puntaje animate__zoomIn" style="opacity: 1; size: 100px;">
+                    Quiero!
+                </p>
+            </div>
+            <div class="column">
+                <p id="veinte" class="puntaje animate__hinge" style="opacity: 1;">20...</p>
+            </div>
         </div>
 
         <hr>
@@ -87,7 +90,7 @@
                 <img id="fNari" src="./img/Nari3.jpg" alt=""
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoNari()">
             </div>
-            <div class="column is-mobile is-one-quarter">
+            <div id="dFotoYo" class="column is-mobile is-one-quarter">
                 <img id="fYo" src="./img/Yo3.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
                     onclick="elijoYo()">
             </div>
