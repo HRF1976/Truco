@@ -1,36 +1,39 @@
 let ptosNosotros = 0
-let ptosEllos=0
-let brutoNos=0
-let brutoEllos=0
+let ptosEllos = 0
+let brutoNos = 0
+let brutoEllos = 0
 
-var diego="n"
-var bombita="n"
-var mono="n"
-var carlo="n"
-var maga="n"
-var adri="n"
-var ringo="n"
-var lau="n"
-var yo="n"
-var nari="n"
+var diego = "n"
+var bombita = "n"
+var mono = "n"
+var carlo = "n"
+var maga = "n"
+var adri = "n"
+var ringo = "n"
+var lau = "n"
+var yo = "n"
+var nari = "n"
+var lucho = "n"
+var sucio = "n"
 
-window.onload = function(){
+
+window.onload = function () {
     $("#quiero").animate({
         opacity: '1'
-        
-      },"slow");
-      $("#veinte").animate({
+
+    }, "slow");
+    $("#veinte").animate({
         opacity: '1'
-        
-      },4500);
+
+    }, 4500);
 }
 
 function sumarPorotos() {
     ptosNosotros += 1
-    brutoNos+=1
+    brutoNos += 1
 
-    if (brutoNos>15) {
-        ptosNosotros=brutoNos-15
+    if (brutoNos > 15) {
+        ptosNosotros = brutoNos - 15
     }
 
     switch (ptosNosotros) {
@@ -74,7 +77,7 @@ function sumarPorotos() {
             break;
         case 10:
             document.getElementById('ptos2-1').src = './img/5 porotos.jpg';
-            
+
             break;
         case 11:
             document.getElementById('ptos3-1').src = './img/1 poroto.png';
@@ -99,23 +102,23 @@ function sumarPorotos() {
         default:
             break;
     }
-    if (brutoNos<16) {
-        document.getElementById("marcadorPtosN").textContent=ptosNosotros+" Malas"
+    if (brutoNos < 16) {
+        document.getElementById("marcadorPtosN").textContent = ptosNosotros + " Malas"
     } else {
-        document.getElementById("marcadorPtosN").textContent=(ptosNosotros) +" Buenas"
+        document.getElementById("marcadorPtosN").textContent = (ptosNosotros) + " Buenas"
     }
 }
 
 function restarPorotos() {
     ptosNosotros -= 1
-    brutoNos-=1
-    if (ptosNosotros <0) {
-        ptosNosotros=0
+    brutoNos -= 1
+    if (ptosNosotros < 0) {
+        ptosNosotros = 0
     }
-    if (brutoNos>15) {
-        ptosNosotros=brutoNos-15
+    if (brutoNos > 15) {
+        ptosNosotros = brutoNos - 15
     } else {
-        ptosNosotros=brutoNos
+        ptosNosotros = brutoNos
     }
     switch (ptosNosotros) {
         case 0:
@@ -188,20 +191,20 @@ function restarPorotos() {
         default:
             break;
     }
-    if (brutoNos<16) {
-        document.getElementById("marcadorPtosN").textContent=ptosNosotros+" Malas"
+    if (brutoNos < 16) {
+        document.getElementById("marcadorPtosN").textContent = ptosNosotros + " Malas"
     } else {
-        document.getElementById("marcadorPtosN").textContent=(ptosNosotros) +" Buenas"
+        document.getElementById("marcadorPtosN").textContent = (ptosNosotros) + " Buenas"
     }
 
 }
 
 function sumarPorotosE() {
     ptosEllos += 1
-    brutoEllos+=1
+    brutoEllos += 1
 
-    if (brutoEllos>15) {
-        ptosEllos=brutoEllos-15
+    if (brutoEllos > 15) {
+        ptosEllos = brutoEllos - 15
     }
 
     switch (ptosEllos) {
@@ -245,7 +248,7 @@ function sumarPorotosE() {
             break;
         case 10:
             document.getElementById('ptos2-2').src = './img/5 porotos.jpg';
-            
+
             break;
         case 11:
             document.getElementById('ptos3-2').src = './img/1 poroto.png';
@@ -270,23 +273,23 @@ function sumarPorotosE() {
         default:
             break;
     }
-    if (brutoEllos<16) {
-        document.getElementById("marcadorPtosE").textContent=ptosEllos+" Malas"
+    if (brutoEllos < 16) {
+        document.getElementById("marcadorPtosE").textContent = ptosEllos + " Malas"
     } else {
-        document.getElementById("marcadorPtosE").textContent=(ptosEllos) +" Buenas"
+        document.getElementById("marcadorPtosE").textContent = (ptosEllos) + " Buenas"
     }
 }
 
 function restarPorotosE() {
     ptosEllos -= 1
-    brutoEllos-=1
-    if (ptosEllos <0) {
-        ptosEllos=0
+    brutoEllos -= 1
+    if (ptosEllos < 0) {
+        ptosEllos = 0
     }
-    if (brutoEllos>15) {
-        ptosEllos=brutoEllos-15
+    if (brutoEllos > 15) {
+        ptosEllos = brutoEllos - 15
     } else {
-        ptosEllos=brutoEllos
+        ptosEllos = brutoEllos
     }
     switch (ptosEllos) {
         case 0:
@@ -359,127 +362,144 @@ function restarPorotosE() {
         default:
             break;
     }
-    if (brutoEllos<16) {
-        document.getElementById("marcadorPtosE").textContent=ptosEllos+" Malas"
+    if (brutoEllos < 16) {
+        document.getElementById("marcadorPtosE").textContent = ptosEllos + " Malas"
     } else {
-        document.getElementById("marcadorPtosE").textContent=(ptosEllos) +" Buenas"
+        document.getElementById("marcadorPtosE").textContent = (ptosEllos) + " Buenas"
     }
 
 }
 
 function aJugar() {
-    document.getElementById("elegirParticipantes").style.visibility="hidden ";
-    document.getElementById("elegirParticipantes").style.display="none";
-    document.getElementById("tablero").style.visibility="visible";
-    document.getElementById("tablero").style.display="block"
+    document.getElementById("elegirParticipantes").style.visibility = "hidden ";
+    document.getElementById("elegirParticipantes").style.display = "none";
+    document.getElementById("tablero").style.visibility = "visible";
+    document.getElementById("tablero").style.display = "block"
 
 }
 
-function irAFotos(){
-    document.getElementById("inicio").style.visibility="hidden ";
-    document.getElementById("inicio").style.display="none";
-    document.getElementById("elegirParticipantes").style.visibility="visible ";
-    document.getElementById("elegirParticipantes").style.display= "block" ;
+function irAFotos() {
+    document.getElementById("inicio").style.visibility = "hidden ";
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("elegirParticipantes").style.visibility = "visible ";
+    document.getElementById("elegirParticipantes").style.display = "block";
 
 }
 
-function elijoDiego (){
-    if (diego=="s") {
-        document.getElementById("fDiego").src='./img/Diego3.jpg'
-        diego="n"
+function elijoDiego() {
+    if (diego == "s") {
+        document.getElementById("fDiego").src = './img/Diego3.jpg'
+        diego = "n"
     } else {
-        document.getElementById("fDiego").src='./img/DiegoSel.jpg'
-        diego="s"
+        document.getElementById("fDiego").src = './img/DiegoSel.jpg'
+        diego = "s"
     }
 }
 
-function elijoMono (){
-    if (mono=="s") {
-        document.getElementById("fMono").src='./img/Mono3.jpg'
-        mono="n"
+function elijoMono() {
+    if (mono == "s") {
+        document.getElementById("fMono").src = './img/Mono3.jpg'
+        mono = "n"
     } else {
-        document.getElementById("fMono").src='./img/MonoSel.jpg'
-        mono="s"
+        document.getElementById("fMono").src = './img/MonoSel.jpg'
+        mono = "s"
     }
 }
 
-function elijobombita (){
-    if (bombita=="s") {
-        document.getElementById("fBombita").src='./img/Bombita3.jpg'
-        bombita="n"
+function elijobombita() {
+    if (bombita == "s") {
+        document.getElementById("fBombita").src = './img/Bombita3.jpg'
+        bombita = "n"
     } else {
-        document.getElementById("fBombita").src='./img/bombitaSel.jpg'
-        bombita="s"
+        document.getElementById("fBombita").src = './img/bombitaSel.jpg'
+        bombita = "s"
     }
 }
 
-function elijoCarlo (){
-    if (carlo=="s") {
-        document.getElementById("fCarlo").src='./img/Carlo3.jpg'
-        carlo="n"
+function elijoCarlo() {
+    if (carlo == "s") {
+        document.getElementById("fCarlo").src = './img/Carlo3.jpg'
+        carlo = "n"
     } else {
-        document.getElementById("fCarlo").src='./img/carloSel.jpg'
-        carlo="s"
+        document.getElementById("fCarlo").src = './img/carloSel.jpg'
+        carlo = "s"
     }
 }
 
-function elijoMaga (){
-    if (maga=="s") {
-        document.getElementById("fMaga").src='./img/Maga.jpg'
-        maga="n"
+function elijoMaga() {
+    if (maga == "s") {
+        document.getElementById("fMaga").src = './img/Maga.jpg'
+        maga = "n"
     } else {
-        document.getElementById("fMaga").src='./img/MagaSel.jpg'
-        maga="s"
+        document.getElementById("fMaga").src = './img/MagaSel.jpg'
+        maga = "s"
     }
 }
 
-function elijoAdri (){
-    if (adri=="s") {
-        document.getElementById("fAdri").src='./img/Adri.jpg'
-        adri="n"
+function elijoAdri() {
+    if (adri == "s") {
+        document.getElementById("fAdri").src = './img/Adri.jpg'
+        adri = "n"
     } else {
-        document.getElementById("fAdri").src='./img/AdriSel.jpg'
-        adri="s"
+        document.getElementById("fAdri").src = './img/AdriSel.jpg'
+        adri = "s"
     }
 }
 
-function elijoLau (){
-    if (lau=="s") {
-        document.getElementById("fLau").src='./img/Lau3.jpg'
-    lau="n"
+function elijoLau() {
+    if (lau == "s") {
+        document.getElementById("fLau").src = './img/Lau3.jpg'
+        lau = "n"
     } else {
-        document.getElementById("fLau").src='./img/LauSel.jpg'
-        lau="s"
+        document.getElementById("fLau").src = './img/LauSel.jpg'
+        lau = "s"
     }
 }
 
-function elijoRingo (){
-    if (ringo=="s") {
-        document.getElementById("fRingo").src='./img/Ringo3.jpg'
-        ringo="n"
+function elijoRingo() {
+    if (ringo == "s") {
+        document.getElementById("fRingo").src = './img/Ringo3.jpg'
+        ringo = "n"
     } else {
-        document.getElementById("fRingo").src='./img/RingoSel.jpg'
-        ringo="s"
+        document.getElementById("fRingo").src = './img/RingoSel.jpg'
+        ringo = "s"
     }
 }
 
-function elijoNari (){
-    if (nari=="s") {
-        document.getElementById("fNari").src='./img/Nari3.jpg'
-        nari="n"
+function elijoNari() {
+    if (nari == "s") {
+        document.getElementById("fNari").src = './img/Nari3.jpg'
+        nari = "n"
     } else {
-        document.getElementById("fNari").src='./img/NariSel.jpg'
-        nari="s"
+        document.getElementById("fNari").src = './img/NariSel.jpg'
+        nari = "s"
     }
 }
 
-function elijoYo (){
-    if (yo=="s") {
-        document.getElementById("fYo").src='./img/Yo3.jpg'
-        yo="n"
+function elijoYo() {
+    if (yo == "s") {
+        document.getElementById("fYo").src = './img/Yo3.jpg'
+        yo = "n"
     } else {
-        document.getElementById("fYo").src='./img/YoSel.jpg'
-        yo="s"
+        document.getElementById("fYo").src = './img/YoSel.jpg'
+        yo = "s"
     }
-    
 }
+    function elijoLucho() {
+        if (lucho == "s") {
+            document.getElementById("fLucho").src = './img/Lucho.jpg'
+            lucho = "n"
+        } else {
+            document.getElementById("fLucho").src = './img/LuchoSel.jpg'
+            lucho = "s"
+        }
+    }
+    function elijoSucio() {
+        if (sucio == "s") {
+            document.getElementById("fSucio").src = './img/Sucio.jpg'
+            sucio = "n"
+        } else {
+            document.getElementById("fSucio").src = './img/SucioSel.jpg'
+            sucio = "s"
+        }
+    }
