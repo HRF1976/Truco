@@ -13,7 +13,7 @@ var ringo="n"
 var lau="n"
 var yo="n"
 var nari="n"
-/*
+
 window.onload = function(){
     $("#quiero").animate({
         opacity: '1'
@@ -24,7 +24,7 @@ window.onload = function(){
         
       },4500);
 }
-*/
+
 function sumarPorotos() {
     ptosNosotros += 1
     brutoNos+=1

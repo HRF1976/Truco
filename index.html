@@ -6,22 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/bulma.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/truco.css">
     <script src="./js/truco.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Truco</title>
 </head>
-
+<!-- level  -->
 <body>
     <div id="inicio">
-        <div class="level has-text-white has-text-weight-semibold p-5 mb-3 columns"
+        <div class="has-text-white has-text-weight-semibold p-5 mb-3 columns is-mobile"
             style="background-color:rgb(29, 29, 71) ;">
-            <div class="column is-2">
-                <p id="quiero" class="puntaje animate__zoomIn" style="opacity: 1; size: 100px;">
+            <div class="column is-5">
+                <p id="quiero" class="animate__zoomIn puntaje" style="opacity: 1;">
                     Quiero!
                 </p>
             </div>
-            <div class="column">
+            <div class="column is-one-fifth">
                 <p id="veinte" class="puntaje animate__hinge" style="opacity: 1;">20...</p>
             </div>
         </div>
@@ -46,57 +47,62 @@
 
     <div id="elegirParticipantes" class="box is-centered is-mobile is-10" style="display: none; visibility:hidden">
         <div class="columns is-mobile">
-            <div class="column is-mobile is-one-quarter">
+            <div class="column is-mobile is-one-third">
                 <img id="fAdri" src="./img/Adri.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
                     onclick="elijoAdri()">
             </div>
-            <div class="column is-mobile is-one-quarter" style="border: 5px; border-color:blue">
+            <div class="column is-mobile is-one-third" style="border: 5px; border-color:blue">
                 <img id="fDiego" src="./img/Diego3.jpg" alt=""
                     style="max-width:100%; max-height: 100%; object-fit: contain;" onclick="elijoDiego()">
             </div>
-            <div class="column is-mobile is-one-quarter">
+            <div class="column is-mobile is-one-third">
                 <img id="fMono" src="./img/Mono3.jpg" alt=""
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoMono()">
             </div>
-            <div class="column is-mobile is-one-quarter">
-                <img id="fCarlo" src="./img/Carlo3.jpg" alt=""
-                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoCarlo()">
-            </div>
+            
         </div>
 
         <!-- segunda línea de fotos -->
         <div class="columns is-mobile">
-            <div class="column is-mobile is-one-quarter">
+            <div class="column is-mobile is-one-third">
                 <img id="fBombita" src="./img/Bombita3.jpg" alt=""
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijobombita()">
             </div>
-            <div class="column is-mobile is-one-quarter">
+            <div class="column is-mobile is-one-third">
                 <img id="fMaga" src="./img/Maga.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
                     onclick="elijoMaga()">
             </div>
-            <div class="column is-mobile is-one-quarter">
+            <div class="column is-mobile is-one-third">
                 <img id="fRingo" src="./img/Ringo3.jpg" alt=""
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoRingo()">
             </div>
-            <div class="column is-mobile is-one-quarter">
+            
+
+        </div>
+        <!-- tercer fila de participantes -->
+        <div class="columns is-mobile">
+            <div class="column is-mobile is-one-third">
+                <img id="fNari" src="./img/Nari3.jpg" alt=""
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoNari()">
+            </div>
+            <div id="dFotoYo" class="column is-mobile is-one-third">
+                <img id="fYo" src="./img/Yo3.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
+                    onclick="elijoYo()">
+            </div>
+            <div class="column is-mobile is-one-third">
                 <img id="fLau" src="./img/Lau3.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
                     onclick="elijoLau()">
             </div>
 
         </div>
+
         <!-- tercer fila de participantes -->
         <div class="columns is-mobile">
-            <div class="column is-mobile is-one-quarter">
-                <img id="fNari" src="./img/Nari3.jpg" alt=""
-                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoNari()">
+            <div class="column is-mobile is-one-third">
+                <img id="fCarlo" src="./img/Carlo3.jpg" alt=""
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoCarlo()">
             </div>
-            <div id="dFotoYo" class="column is-mobile is-one-quarter">
-                <img id="fYo" src="./img/Yo3.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
-                    onclick="elijoYo()">
-            </div>
-
         </div>
-
 
 
 
