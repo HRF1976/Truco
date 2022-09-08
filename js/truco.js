@@ -383,7 +383,8 @@ function irAFotos() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("elegirParticipantes").style.visibility = "visible ";
     document.getElementById("elegirParticipantes").style.display = "block";
-
+    document.getElementById("futer").style.visibility = "hidden ";
+    document.getElementById("futer").style.display = "none";
 }
 
 function elijoDiego() {
