@@ -32,9 +32,12 @@
             <div class="box">
                 <section id="Leyes">
                     <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotos()">
-                        <p class="title">Elegir Participantes</p>
-
-
+                        <p class="title">Elegir "Nosotros"</p>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotos()">
+                        <p class="title">Elegir "Ellos"</p>
                     </div>
 
 
@@ -98,7 +101,7 @@
 
         <!-- cuarta fila de participantes -->
         <div class="columns is-mobile">
-            <div class="column is-mobile is-one-third">
+            <div class="column is-mobile is-one-third"> 
                 <img id="fCarlo" src="./img/Carlo3.jpg" alt=""
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoCarlo()">
             </div>
@@ -119,10 +122,16 @@
     </div>
 
 
-
+<!-- TABLERO DE PUNTAJES -->
     <div id="tablero" class="box is-centered is-mobile" style="visibility:hidden; display:none">
         <div class="columns is-mobile is-centered" id="puntos1" style="background-color: rgb(245, 235, 235);">
+            
             <div class="column is-6" style="background-color: black;">
+                <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: blue; ">
+                    <div class="is-one-third"><img src="img/Adri.jpg" alt=""></div>
+                    <div class="is-one-third"><img src="img/bombita3.jpg" alt=""></div>
+                    <div class="is-one-third"><img src="img/Lucho.jpg" alt=""></div>
+                </div>
                 <img style="margin:5px;" id="ptos1-1" src="./img/0 porotos.jpg" alt="">
                 <br><br>
                 <img style="margin:5px;" id="ptos2-1" src="./img/0 porotos.jpg" alt="">
@@ -151,6 +160,11 @@
             <div style="background-color: rgb(101, 219, 213);width: 5px; "></div>
 
             <div class="column is-6" style="background-color: black;">
+                <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: red; ">
+                    <div class="is-one-third"><img src="img/Diego3.jpg" alt=""></div>
+                    <div class="is-one-third"><img src="img/Mono3.jpg" alt=""></div>
+                    <div class="is-one-third"><img src="img/Yo3.jpg" alt=""></div>
+                </div>
                 <img style="margin:5px;" id="ptos1-2" src="./img/0 porotos.jpg" alt="">
                 <br><br>
                 <img style="margin:5px;" id="ptos2-2" src="./img/0 porotos.jpg" alt="">
@@ -163,7 +177,6 @@
                 </div>
 
                 <div class="columns is-mobile">
-
 
 
                     <div class="column is-half">
