@@ -36,9 +36,16 @@
                     </div>
                     <br>
                     <br>
-                    <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotos()">
+                    <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotosE()">
                         <p class="title">Elegir<span style="color: rgb(115, 8, 8) ;" > "Ellos"</span></p>
                     </div>
+                    <br>
+                    <br>
+                    <br>  
+                    <div class="hero is-small is-info" style="padding: 5px;" onclick="aJugar()">
+                        <p class="title">A jugar!</p>
+                    </div>
+                    
 
 
                 </section>
@@ -46,7 +53,7 @@
         </div>
         
     </div>
-    <div id="futer" class="footer" style="background-color: rgb(29,29,71) ;"></div>
+    <div id="futer" class="footer" style="background-color: rgb(29,29,71); height: 100%; "></div>
     <!-- sección de elección de participantes -->
 
     <div id="elegirParticipantes" class="box is-centered is-mobile is-10" style="display: none; visibility:hidden">
@@ -119,19 +126,19 @@
 
 
 
-        <button onclick="aJugar()">Listo!</button>
+        <button onclick="yaElegí()">Listo!</button>
     </div>
 
 
 <!-- TABLERO DE PUNTAJES -->
-    <div id="tablero" class="box is-centered is-mobile" style="visibility:hidden; display:none">
+     <div id="tablero" class="box is-centered is-mobile" style="visibility:hidden; display:none"> 
         <div class="columns is-mobile is-centered" id="puntos1" style="background-color: rgb(245, 235, 235);">
             
             <div class="column is-6" style="background-color: black;">
                 <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(12, 12, 74); ">
-                    <div class="is-one-third"><img src="img/Adri.jpg" alt=""></div>
-                    <div class="is-one-third"><img src="img/Sucio.jpg" alt=""></div>
-                    <div class="is-one-third"><img src="img/Lucho.jpg" alt=""></div>
+                    <div class="is-one-third"><img id="n1" src= "" alt=""></div>
+                    <div class="is-one-third"><img id="n2" src= "" alt=""></div>
+                    <div class="is-one-third"><img id="n3" src= "" alt=""></div>
                 </div>
                 <img style="margin:5px;" id="ptos1-1" src="./img/0 porotos.jpg" alt="">
                 <br><br>
@@ -162,9 +169,9 @@
 
             <div class="column is-6" style="background-color: black;">
                 <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(115, 8, 8); ">
-                    <div class="is-one-third"><img src="img/Diego3.jpg" alt=""></div>
-                    <div class="is-one-third"><img src="img/Mono3.jpg" alt=""></div>
-                    <div class="is-one-third"><img src="img/Yo3.jpg" alt=""></div>
+                    <div class="is-one-third"><img id="e1" src="" alt=""></div>
+                    <div class="is-one-third"><img id="e2" src="" alt=""></div>
+                    <div class="is-one-third"><img id="e3" src="" alt=""></div>
                 </div>
                 <img style="margin:5px;" id="ptos1-2" src="./img/0 porotos.jpg" alt="">
                 <br><br>
