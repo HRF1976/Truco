@@ -761,7 +761,7 @@ function elijoMaga() {
 
 
         if (maga == "s") {
-            document.getElementById("fMaga").src = './img/Maga3.jpg'
+            document.getElementById("fMaga").src = './img/Maga.jpg'
             maga = "n"
             cantJugadoresN -= 1
             switch (cantJugadoresN) {
@@ -783,13 +783,13 @@ function elijoMaga() {
             cantJugadoresN += 1
             switch (cantJugadoresN) {
                 case 1:
-                    document.getElementById("n1").src = './img/Maga3.jpg'
+                    document.getElementById("n1").src = './img/Maga.jpg'
                     break;
                 case 2:
-                    document.getElementById("n2").src = './img/Maga3.jpg'
+                    document.getElementById("n2").src = './img/Maga.jpg'
                     break;
                 case 3:
-                    document.getElementById("n3").src = './img/Maga3.jpg'
+                    document.getElementById("n3").src = './img/Maga.jpg'
                     break;
                 case is > 3:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
@@ -800,7 +800,7 @@ function elijoMaga() {
         }
     } else {
         if (maga == "s") {
-            document.getElementById("fMaga").src = './img/Maga3.jpg'
+            document.getElementById("fMaga").src = './img/Maga.jpg'
             maga = "n"
             cantJugadoresE -= 1
             switch (cantJugadoresE) {
@@ -824,13 +824,13 @@ function elijoMaga() {
             cantJugadoresE += 1
             switch (cantJugadoresE) {
                 case 1:
-                    document.getElementById("e1").src = './img/Maga3.jpg'
+                    document.getElementById("e1").src = './img/Maga.jpg'
                     break;
                 case 2:
-                    document.getElementById("e2").src = './img/Maga3.jpg'
+                    document.getElementById("e2").src = './img/Maga.jpg'
                     break;
                 case 3:
-                    document.getElementById("e3").src = './img/Maga3.jpg'
+                    document.getElementById("e3").src = './img/Maga.jpg'
                     break;
                 case is > 3:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
@@ -933,7 +933,7 @@ function elijoLau() {
 
 
         if (lau == "s") {
-            document.getElementById("fLau").src = './img/Lau.jpg'
+            document.getElementById("fLau").src = './img/Lau3.jpg'
             lau = "n"
             cantJugadoresN -= 1
             switch (cantJugadoresN) {
@@ -955,13 +955,13 @@ function elijoLau() {
             cantJugadoresN += 1
             switch (cantJugadoresN) {
                 case 1:
-                    document.getElementById("n1").src = './img/Lau.jpg'
+                    document.getElementById("n1").src = './img/Lau3.jpg'
                     break;
                 case 2:
-                    document.getElementById("n2").src = './img/Lau.jpg'
+                    document.getElementById("n2").src = './img/Lau3.jpg'
                     break;
                 case 3:
-                    document.getElementById("n3").src = './img/Lau.jpg'
+                    document.getElementById("n3").src = './img/Lau3.jpg'
                     break;
                 case is > 3:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
@@ -972,7 +972,7 @@ function elijoLau() {
         }
     } else {
         if (lau == "s") {
-            document.getElementById("fLau").src = './img/Lau.jpg'
+            document.getElementById("fLau").src = './img/Lau3.jpg'
             lau = "n"
             cantJugadoresE -= 1
             switch (cantJugadoresE) {
@@ -996,16 +996,19 @@ function elijoLau() {
             cantJugadoresE += 1
             switch (cantJugadoresE) {
                 case 1:
-                    document.getElementById("e1").src = './img/Lau.jpg'
+                    document.getElementById("e1").src = './img/Lau3.jpg'
                     break;
                 case 2:
-                    document.getElementById("e2").src = './img/Lau.jpg'
+                    document.getElementById("e2").src = './img/Lau3.jpg'
                     break;
                 case 3:
-                    document.getElementById("e3").src = './img/Lau.jpg'
+                    document.getElementById("e3").src = './img/Lau3.jpg'
                     break;
-                case is > 3:
+                case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                    cantJugadoresE=3
+                    document.getElementById("fLau").src = './img/Lau3.jpg'
+            lau = "n"
                 default:
                     break;
             }
