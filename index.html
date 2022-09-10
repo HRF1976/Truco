@@ -10,6 +10,8 @@
     <script src="./js/truco.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+   
     <title>Truco</title>
 </head>
 <!-- level  -->
@@ -18,12 +20,12 @@
         <div class="has-text-white has-text-weight-semibold p-5 mb-3 columns is-mobile"
             style="background-color:rgb(29, 29, 71) ;">
             <div class="column is-5">
-                <p id="quiero" class="animate__zoomIn puntaje" style="opacity: 1;">
+                <p id="quiero" class="puntaje" style="opacity: 1; font-style: italic; ">
                     Quiero!
                 </p>
             </div>
             <div class="column is-one-fifth">
-                <p id="veinte" class="puntaje animate__hinge" style="opacity: 1;">20...</p>
+                <p id="veinte" class="puntaje animate__hinge" style="opacity: 1; font-style: italic; ">20...</p>
             </div>
         </div>
 
@@ -31,12 +33,12 @@
         <div class="column is-10">
             <div class="box"  style="background-color: transparent;">
                 <section id="Leyes">
-                    <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotos()">
+                    <div class="hero is-small is-info likeBtn" style="padding: 5px;" onclick="irAFotos()">
                         <p class="title">Elegir <span style="color: rgb(12, 12, 74) ;" >"Nosotros"</span></p>
                     </div>
                     <br>
                     <br>
-                    <div class="hero is-small is-info" style="padding: 5px;" onclick="irAFotosE()">
+                    <div class="hero is-small is-info likeBtn" style="padding: 5px;" onclick="irAFotosE()">
                         <p class="title">Elegir<span style="color: rgb(115, 8, 8) ;" > "Ellos"</span></p>
                     </div>
                     <br>
