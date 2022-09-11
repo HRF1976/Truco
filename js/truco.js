@@ -393,6 +393,8 @@ function yaElegí(){
     document.getElementById("elegirParticipantes").style.display = "none";
     document.getElementById("inicio").style.visibility = "visible";
     document.getElementById("inicio").style.display = "block"
+    document.getElementById("futer").style.visibility = "visible";
+    document.getElementById("futer").style.display = "block";
 }
 
 function irAFotos() {
@@ -403,6 +405,7 @@ function irAFotos() {
     document.getElementById("elegirParticipantes").style.display = "block";
     document.getElementById("futer").style.visibility = "hidden ";
     document.getElementById("futer").style.display = "none";
+    
 }
 
 function irAFotosE() {
