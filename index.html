@@ -11,53 +11,61 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Parisienne&display=swap" rel="stylesheet">
-   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Parisienne&display=swap" rel="stylesheet">
+
     <title>Truco</title>
 </head>
 <!-- level  -->
+
 <body style="background-color: black">
-    <div id="inicio" style="background-image: url(./img/truco.jpg); height: 500px;">
+    <div id="inicio" style="background-image: url(./img/truco.jpg); height: 100%; background-repeat: no-repeat;">
         <div class="has-text-white has-text-weight-semibold p-5 mb-3 columns is-mobile"
             style="background-image: url(./img/fileteado2.jpg); background-size:cover; background-repeat: no-repeat;">
             <!-- background-color:rgb(29, 29, 71) ;" -->
             <div class="column is-5">
-                <p id="quiero" class="titulo" style="opacity: 1; margin-left: 1em; margin-top: 1em; font-family: 'Ms Madi', cursive;">
+                <p id="quiero" class="titulo"
+                    style="opacity: 1; margin-left: 1em; margin-top: 1em; font-family: 'Ms Madi', cursive;">
                     Quiero!
                 </p>
             </div>
             <div class="column is-one-fifth">
-                <p id="veinte" class="titulo animate__hinge" style="opacity: 1; font-style: italic; margin-left: 1em; margin-top: 1em; font-family: 'Ms Madi', cursive;">20...</p>
+                <p id="veinte" class="titulo animate__hinge"
+                    style="opacity: 1; font-style: italic; margin-left: 1em; margin-top: 1em; font-family: 'Ms Madi', cursive;">
+                    20...</p>
             </div>
         </div>
 
-        <hr>
+
+<br>
+        <br>
         <div class="column is-10">
-            <div class="box"  style="background-color: transparent;">
+            <div class="box" style="background-color: transparent;">
                 <section id="Leyes">
                     <div class="hero is-small is-info likeBtn" style="padding: 5px;" onclick="irAFotos()">
-                        <p class="title">Elegir <span style="color: rgb(12, 12, 74) ; font-family: 'Ms Madi', cursive;" >"Nosotros"</span></p>
+                        <p class="title">Elegir <span
+                                style="color: rgb(12, 12, 74) ; font-family: 'Ms Madi', cursive;">"Nosotros"</span></p>
                     </div>
                     <br>
                     <br>
                     <div class="hero is-small is-info likeBtn" style="padding: 5px;" onclick="irAFotosE()">
-                        <p class="title">Elegir<span style="color: rgb(115, 8, 8) ;font-family: 'Ms Madi', cursive;" > "Ellos"</span></p>
+                        <p class="title">Elegir<span style="color: rgb(115, 8, 8) ;font-family: 'Ms Madi', cursive;">
+                                "Ellos"</span></p>
                     </div>
                     <br>
                     <br>
-                    <br>  
+                    <br>
                     <div class="hero is-small is-dark likeBtn" style="padding: 5px;" onclick="aJugar()">
                         <p class="title" style="font-family: 'Ms Madi', cursive;">A jugar!</p>
                     </div>
-                    
+
 
 
                 </section>
             </div>
         </div>
-        
+
     </div>
     <div id="futer" class="footer" style="background-color: black; height: 100%; "></div>
     <!-- sección de elección de participantes -->
@@ -65,8 +73,8 @@
     <div id="elegirParticipantes" class="box is-centered is-mobile is-10" style="display: none; visibility:hidden">
         <div class="columns is-mobile">
             <div class="column is-mobile is-one-third jugadores">
-                <img class="fJugadores" id="fAdri" src="./img/Adri.jpg" alt="" style="max-width: 100% max-height=100%; object-fit: contain"
-                    onclick="elijoAdri()">
+                <img class="fJugadores" id="fAdri" src="./img/Adri.jpg" alt=""
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoAdri()">
             </div>
             <div class="column is-mobile is-one-third jugadores" style="border: 5px; border-color:blue">
                 <img class="fJugadores" id="fDiego" src="./img/Diego3.jpg" alt=""
@@ -76,7 +84,7 @@
                 <img id="fMono" src="./img/Mono3.jpg" alt="" class="fJugadores"
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoMono()">
             </div>
-            
+
         </div>
 
         <!-- segunda línea de fotos -->
@@ -86,14 +94,14 @@
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijobombita()">
             </div>
             <div class="column is-mobile is-one-third jugadores ">
-                <img id="fMaga" src="./img/Maga.jpg" alt=""  class="fJugadores" style="max-width: 100% max-height=100%; object-fit: contain"
-                    onclick="elijoMaga()">
+                <img id="fMaga" src="./img/Maga.jpg" alt="" class="fJugadores"
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoMaga()">
             </div>
             <div class="column is-mobile is-one-third jugadores ">
                 <img id="fRingo" src="./img/Ringo3.jpg" alt="" class="fJugadores"
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoRingo()">
             </div>
-            
+
 
         </div>
         <!-- tercer fila de participantes -->
@@ -103,19 +111,19 @@
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoNari()">
             </div>
             <div id="dFotoYo" class="column is-mobile is-one-third jugadores ">
-                <img id="fYo" src="./img/Yo3.jpg" alt="" class="fJugadores" style="max-width: 100% max-height=100%; object-fit: contain"
-                    onclick="elijoYo()">
+                <img id="fYo" src="./img/Yo3.jpg" alt="" class="fJugadores"
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoYo()">
             </div>
             <div class="column is-mobile is-one-third jugadores">
-                <img id="fLau" src="./img/Lau3.jpg" alt="" class="fJugadores" style="max-width: 100% max-height=100%; object-fit: contain"
-                    onclick="elijoLau()">
+                <img id="fLau" src="./img/Lau3.jpg" alt="" class="fJugadores"
+                    style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoLau()">
             </div>
 
         </div>
 
         <!-- cuarta fila de participantes -->
         <div class="columns is-mobile">
-            <div class="column is-mobile is-one-third jugadores"> 
+            <div class="column is-mobile is-one-third jugadores">
                 <img id="fCarlo" src="./img/Carlo3.jpg" alt="" class="fJugadores"
                     style="max-width: 100% max-height=100%; object-fit: contain" onclick="elijoCarlo()">
             </div>
@@ -138,15 +146,16 @@
     </div>
 
 
-<!-- TABLERO DE PUNTAJES -->
-     <div id="tablero" class="box is-centered is-mobile" style="visibility:hidden; display:none"> 
+    <!-- TABLERO DE PUNTAJES -->
+    <div id="tablero" class="box is-centered is-mobile" style="visibility:hidden; display:none">
         <div class="columns is-mobile is-centered" id="puntos1" style="background-color: rgb(245, 235, 235);">
-            
+
             <div class="column is-6" style="background-color: black;">
-                <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(12, 12, 74); ">
-                    <div class="is-one-third"><img id="n1" src= "" alt=""></div>
-                    <div class="is-one-third"><img id="n2" src= "" alt=""></div>
-                    <div class="is-one-third"><img id="n3" src= "" alt=""></div>
+                <div class="box is-centered is-mobile"
+                    style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(12, 12, 74); ">
+                    <div class="is-one-third"><img id="n1" src="" alt=""></div>
+                    <div class="is-one-third"><img id="n2" src="" alt=""></div>
+                    <div class="is-one-third"><img id="n3" src="" alt=""></div>
                 </div>
                 <img style="margin:5px;" id="ptos1-1" src="./img/0 porotos.jpg" alt="">
                 <br><br>
@@ -176,7 +185,8 @@
             <div style="background-color: rgb(101, 219, 213);width: 5px; "></div>
 
             <div class="column is-6" style="background-color: black;">
-                <div class="box is-centered is-mobile" style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(115, 8, 8); ">
+                <div class="box is-centered is-mobile"
+                    style="display: flex; flex-direction:row; padding: 0; margin: 0; background-color: rgb(115, 8, 8); ">
                     <div class="is-one-third"><img id="e1" src="" alt=""></div>
                     <div class="is-one-third"><img id="e2" src="" alt=""></div>
                     <div class="is-one-third"><img id="e3" src="" alt=""></div>
@@ -212,7 +222,7 @@
             </div>
         </div>
     </div>
-<div style="size: 100%; background-color:black"></div>
+    <div style="size: 100%; background-color:black"></div>
 
 </body>
 
