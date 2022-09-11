@@ -3,6 +3,12 @@
     color:#0070c2;
   }
 
+  .titulo {
+    font-size: 12vw ;
+    color:#0070c2;
+    font-weight: bold;
+  }
+
   .jugadores{
     padding: 0;
   }
