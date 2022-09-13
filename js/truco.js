@@ -385,7 +385,8 @@ function aJugar() {
     document.getElementById("inicio").style.display = "none";
     document.getElementById("tablero").style.visibility = "visible";
     document.getElementById("tablero").style.display = "block"
-
+    document.getElementById("futer").style.visibility = "hidden";
+    document.getElementById("futer").style.display = "none";
 }
 
 function yaElegí(){
