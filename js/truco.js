@@ -9,7 +9,7 @@ var mono = "n"
 var carlo = "n"
 var maga = "n"
 var adri = "n"
-var ringo = "n"
+var sole2 = "n"
 var lau = "n"
 var yo = "n"
 var nari = "n"
@@ -1066,13 +1066,13 @@ function elijoLau() {
 
 }
 
-function elijoRingo() {
+function elijoSole2() {
     if (eligiendo == "Nosotros") {
 
 
-        if (ringo == "s") {
-            document.getElementById("fRingo").src = './img/Ringo3.jpg'
-            ringo = "n"
+        if (sole == "s") {
+            document.getElementById("fSole2").src = './img/sole2.jpg'
+            sole = "n"
             cantJugadoresN -= 1
             switch (cantJugadoresN) {
                 case 0:
@@ -1088,22 +1088,22 @@ function elijoRingo() {
                     break;
             }
         } else {
-            document.getElementById("fRingo").src = './img/RingoSel.jpg'
-            ringo = "s"
+            document.getElementById("fSole2").src = './img/sole2Sel.jpg'
+            sole = "s"
             cantJugadoresN += 1
             switch (cantJugadoresN) {
                 case 1:
-                    document.getElementById("n1").src = './img/Ringo3.jpg'
+                    document.getElementById("n1").src = './img/sole2.jpg'
                     break;
                 case 2:
-                    document.getElementById("n2").src = './img/Ringo3.jpg'
+                    document.getElementById("n2").src = './img/sole2.jpg'
                     break;
                 case 3:
-                    document.getElementById("n3").src = './img/Ringo3.jpg'
+                    document.getElementById("n3").src = './img/sole2.jpg'
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fRingo").src = './img/Ringo3.jpg'
+                    document.getElementById("fSole2").src = './img/sole2.jpg'
                     cantJugadoresN=3
                     ringo= "n"
                     break;
@@ -1112,9 +1112,9 @@ function elijoRingo() {
             }
         }
     } else {
-        if (ringo == "s") {
-            document.getElementById("fRingo").src = './img/Ringo3.jpg'
-            ringo = "n"
+        if (sole == "s") {
+            document.getElementById("fSole2").src = './img/sole2.jpg'
+            sole = "n"
             cantJugadoresE -= 1
             switch (cantJugadoresE) {
                 case 0:
@@ -1132,24 +1132,24 @@ function elijoRingo() {
             }
 
         } else {
-            document.getElementById("fRingo").src = './img/RingoSel.jpg'
-            ringo = "s"
+            document.getElementById("fSole2").src = './img/sole2Sel.jpg'
+            sole = "s"
             cantJugadoresE += 1
             switch (cantJugadoresE) {
                 case 1:
-                    document.getElementById("e1").src = './img/Ringo3.jpg'
+                    document.getElementById("e1").src = './img/sole2.jpg'
                     break;
                 case 2:
-                    document.getElementById("e2").src = './img/Ringo3.jpg'
+                    document.getElementById("e2").src = './img/sole2.jpg'
                     break;
                 case 3:
-                    document.getElementById("e3").src = './img/Ringo3.jpg'
+                    document.getElementById("e3").src = './img/sole2.jpg'
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
                     cantJugadoresE=3
-                    document.getElementById("fRingo").src = './img/Ringo3.jpg'
-            ringo = "n"
+                    document.getElementById("fSole2").src = './img/sole2.jpg'
+            sole = "n"
                 default:
                     break;
             }
