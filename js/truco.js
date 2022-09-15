@@ -44,7 +44,9 @@ window.onload = function () {
 function sumarPorotos() {
     ptosNosotros += 1
     brutoNos += 1
-
+    if (brutoNosotros > 30) {
+        brutoNosotros =  15
+    }
     if (brutoNos > 15) {
         ptosNosotros = brutoNos - 15
     }
@@ -216,6 +218,9 @@ function restarPorotos() {
 function sumarPorotosE() {
     ptosEllos += 1
     brutoEllos += 1
+    if (brutoEllos > 30) {
+        brutoEllos =  30
+    }
 
     if (brutoEllos > 15) {
         ptosEllos = brutoEllos - 15
@@ -679,7 +684,7 @@ function elijobombita() {
                 case 1:
                     document.getElementById("e1").src = './img/Bombita3.jpg'
                     break;
-                case 2:
+                case 2:RingoSel
                     document.getElementById("e2").src = './img/Bombita3.jpg'
                     break;
                 case 3:
