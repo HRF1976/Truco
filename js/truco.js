@@ -15,37 +15,35 @@ var yo = "n"
 var nari = "n"
 var lucho = "n"
 var sucio = "n"
-var sole="n"
-var lau4= "n"
+var sole = "n"
+var lau4 = "n"
 var ale = "n"
 
 
 
 var cantJugadoresN = 0
 var cantJugadoresE = 0
-var nn1 = "./img/Diego3.jpg"
-var nn2 = "./img/Mono3.jpg"
-var nn3 = ""
+
 var eligiendo = "Nosotros"
 
 
 
-window.onload = function () {
-    $("#quiero").animate({
-        opacity: '1'
+// window.onload = function () {
+//     $("#quiero").animate({
+//         opacity: '1'
 
-    }, "slow");
-    $("#veinte").animate({
-        opacity: '1'
+//     }, "slow");
+//     $("#veinte").animate({
+//         opacity: '1'
 
-    }, 4500);
-}
+//     }, 4500);
+// }
 
 function sumarPorotos() {
     ptosNosotros += 1
     brutoNos += 1
-    if (brutoNosotros > 30) {
-        brutoNosotros =  15
+    if (brutoNos > 30) {
+        brutoNos = 15
     }
     if (brutoNos > 15) {
         ptosNosotros = brutoNos - 15
@@ -219,7 +217,7 @@ function sumarPorotosE() {
     ptosEllos += 1
     brutoEllos += 1
     if (brutoEllos > 30) {
-        brutoEllos =  30
+        brutoEllos = 30
     }
 
     if (brutoEllos > 15) {
@@ -399,7 +397,7 @@ function aJugar() {
     document.getElementById("futer").style.display = "none";
 }
 
-function yaElegí(){
+function yaElegí() {
     document.getElementById("elegirParticipantes").style.visibility = "hidden ";
     document.getElementById("elegirParticipantes").style.display = "none";
     document.getElementById("inicio").style.visibility = "visible";
@@ -416,7 +414,7 @@ function irAFotos() {
     document.getElementById("elegirParticipantes").style.display = "block";
     document.getElementById("futer").style.visibility = "hidden ";
     document.getElementById("futer").style.display = "none";
-    
+
 }
 
 function irAFotosE() {
@@ -431,181 +429,200 @@ function irAFotosE() {
 
 function elijoDiego() {
     if (eligiendo == "Nosotros") {
+        if (diego == "Ellos") {
+            window.alert("Está en el otro equipo, mocasín");
 
-
-        if (diego == "s") {
-            document.getElementById("fDiego").src = './img/Diego3.jpg'
-            diego = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
         } else {
-            document.getElementById("fDiego").src = './img/DiegoSel.jpg'
-            diego = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Diego3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Diego3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Diego3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fDiego").src = './img/Diego3.jpg'
-                    cantJugadoresN=3
-                    diego= "n"
-                    break;
-                default:
-                    break;
+
+            if (diego != "n") {
+                document.getElementById("fDiego").src = './img/Diego3.jpg'
+                diego = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fDiego").src = './img/DiegoSel.jpg'
+                diego = "Nosotros"
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Diego3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Diego3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Diego3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fDiego").src = './img/Diego3.jpg'
+                        cantJugadoresN = 3
+                        diego = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     } else {
-        if (diego == "s") {
-            document.getElementById("fDiego").src = './img/Diego3.jpg'
-            diego = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
+        if (diego == "Nosotros") {
+            window.alert("Ya tiene equipo, gil/a")
         } else {
-            document.getElementById("fDiego").src = './img/DiegoSel.jpg'
-            diego = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Diego3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Diego3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Diego3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    document.getElementById("fDiego").src = './img/Diego3.jpg'
-                    cantJugadoresE=3
-                    diego= "n"
-                    break;
-                default:
-                    break;
+
+            if (diego != "n") {
+                document.getElementById("fDiego").src = './img/Diego3.jpg'
+                diego = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fDiego").src = './img/DiegoSel.jpg'
+                diego = "Ellos"
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Diego3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Diego3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Diego3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        document.getElementById("fDiego").src = './img/Diego3.jpg'
+                        cantJugadoresE = 3
+                        diego = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
 }
+
 function elijoMono() {
     if (eligiendo == "Nosotros") {
+        if (mono != eligiendo) {
+            window.alert("Está en el otro equipo, mocasín");
 
-
-        if (mono == "s") {
-            document.getElementById("fMono").src = './img/Mono3.jpg'
-            mono = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
         } else {
-            document.getElementById("fMono").src = './img/MonoSel.jpg'
-            mono = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Mono3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Mono3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Mono3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá...")
-                    document.getElementById("fMono").src = './img/Mono3.jpg'
-                    cantJugadoresN=3
-                    mono= "n"
-                    break;
-                default:
-                    break;
+
+            if (mono != "n") {
+                document.getElementById("fMono").src = './img/Mono3.jpg'
+                mono = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fMono").src = './img/MonoSel.jpg'
+                mono = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Mono3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Mono3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Mono3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá...")
+                        document.getElementById("fMono").src = './img/Mono3.jpg'
+                        cantJugadoresN = 3
+                        mono = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     } else {
-        if (mono == "s") {
-            document.getElementById("fMono").src = './img/Mono3.jpg'
-            mono = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
+        if (mono == "Nosotros") {
+            window.alert("Está en el otro equipo, mocasín");
 
         } else {
-            document.getElementById("fMono").src = './img/MonoSel.jpg'
-            mono = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Mono3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Mono3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Mono3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    document.getElementById("fMono").src = './img/Mono3.jpg'
-                    cantJugadoresN=3
-                    mono= "n"
-                default:
-                    break;
+            if (mono != "n") {
+                document.getElementById("fMono").src = './img/Mono3.jpg'
+                mono = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fMono").src = './img/MonoSel.jpg'
+                mono = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Mono3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Mono3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Mono3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        document.getElementById("fMono").src = './img/Mono3.jpg'
+                        cantJugadoresN = 3
+                        mono = "n"
+                    default:
+                        break;
+                }
             }
         }
     }
@@ -649,8 +666,8 @@ function elijobombita() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fBombita").src = './img/bombita3.jpg'
-                    cantJugadoresN=3
-                    bombita= "n"
+                    cantJugadoresN = 3
+                    bombita = "n"
                     break;
                 default:
                     break;
@@ -684,7 +701,7 @@ function elijobombita() {
                 case 1:
                     document.getElementById("e1").src = './img/Bombita3.jpg'
                     break;
-                case 2:RingoSel
+                case 2: RingoSel
                     document.getElementById("e2").src = './img/Bombita3.jpg'
                     break;
                 case 3:
@@ -693,8 +710,8 @@ function elijobombita() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
                     document.getElementById("fBombita").src = './img/bombita3.jpg'
-                    cantJugadoresE=3
-                    bombita= "n"
+                    cantJugadoresE = 3
+                    bombita = "n"
                 default:
                     break;
             }
@@ -741,8 +758,8 @@ function elijoCarlo() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-                    cantJugadoresN=3
-                    carlo= "n"
+                    cantJugadoresN = 3
+                    carlo = "n"
                     break;
                 default:
                     break;
@@ -785,8 +802,8 @@ function elijoCarlo() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
                     document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-                    cantJugadoresE=3
-                    carlo= "n"
+                    cantJugadoresE = 3
+                    carlo = "n"
                 default:
                     break;
             }
@@ -833,8 +850,8 @@ function elijoMaga() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fMaga").src = './img/Maga.jpg'
-                    cantJugadoresN=3
-                    maga= "n"
+                    cantJugadoresN = 3
+                    maga = "n"
                     break;
                 default:
                     break;
@@ -877,8 +894,8 @@ function elijoMaga() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
                     document.getElementById("fMaga").src = './img/Maga.jpg'
-                    cantJugadoresE=3
-                    maga= "n"
+                    cantJugadoresE = 3
+                    maga = "n"
                 default:
                     break;
             }
@@ -925,8 +942,8 @@ function elijoAdri() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fAdri").src = './img/Adri.jpg'
-                    cantJugadoresN=3
-                    adri= "n"
+                    cantJugadoresN = 3
+                    adri = "n"
                     break;
                 default:
                     break;
@@ -969,8 +986,8 @@ function elijoAdri() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
                     document.getElementById("fAdri").src = './img/Adri.jpg'
-                    cantJugadoresE=3
-                    adri= "n"
+                    cantJugadoresE = 3
+                    adri = "n"
                 default:
                     break;
             }
@@ -1017,8 +1034,8 @@ function elijoLau() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fLau").src = './img/Lau3.jpg'
-                    cantJugadoresN=3
-                    lau= "n"
+                    cantJugadoresN = 3
+                    lau = "n"
                     break;
                 default:
                     break;
@@ -1060,9 +1077,9 @@ function elijoLau() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fLau").src = './img/Lau3.jpg'
-            lau = "n"
+                    lau = "n"
                 default:
                     break;
             }
@@ -1109,8 +1126,8 @@ function elijoSole2() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fSole2").src = './img/sole2.jpg'
-                    cantJugadoresN=3
-                    ringo= "n"
+                    cantJugadoresN = 3
+                    ringo = "n"
                     break;
                 default:
                     break;
@@ -1152,9 +1169,9 @@ function elijoSole2() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fSole2").src = './img/sole2.jpg'
-            sole = "n"
+                    sole = "n"
                 default:
                     break;
             }
@@ -1201,8 +1218,8 @@ function elijoNari() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fNari").src = './img/Nari3.jpg'
-                    cantJugadoresN=3
-                    nari= "n"
+                    cantJugadoresN = 3
+                    nari = "n"
                     break;
                 default:
                     break;
@@ -1244,9 +1261,9 @@ function elijoNari() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fNari").src = './img/Nari3.jpg'
-            nari = "n"
+                    nari = "n"
                 default:
                     break;
             }
@@ -1293,8 +1310,8 @@ function elijoYo() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fYo").src = './img/Yo3.jpg'
-                    cantJugadoresN=3
-                    yo= "n"
+                    cantJugadoresN = 3
+                    yo = "n"
                     break;
                 default:
                     break;
@@ -1336,9 +1353,9 @@ function elijoYo() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fYo").src = './img/Yo3.jpg'
-            yo = "n"
+                    yo = "n"
                 default:
                     break;
             }
@@ -1384,8 +1401,8 @@ function elijoLucho() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fLucho").src = './img/Lucho.jpg'
-                    cantJugadoresN=3
-                    lucho= "n"
+                    cantJugadoresN = 3
+                    lucho = "n"
                     break;
                 default:
                     break;
@@ -1427,9 +1444,9 @@ function elijoLucho() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fLucho").src = './img/Lucho.jpg'
-            lucho = "n"
+                    lucho = "n"
                 default:
                     break;
             }
@@ -1475,8 +1492,8 @@ function elijoSucio() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fSucio").src = './img/Sucio.jpg'
-                    cantJugadoresN=3
-                    sucio="n"
+                    cantJugadoresN = 3
+                    sucio = "n"
                     break;
                 default:
                     break;
@@ -1518,9 +1535,9 @@ function elijoSucio() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fSucio").src = './img/Sucio.jpg'
-            sucio = "n"
+                    sucio = "n"
                 default:
                     break;
             }
@@ -1567,8 +1584,8 @@ function elijoSole() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fSole").src = './img/sole.jpg'
-                    cantJugadoresN=3
-                    sucio="n"
+                    cantJugadoresN = 3
+                    sucio = "n"
                     break;
                 default:
                     break;
@@ -1610,9 +1627,9 @@ function elijoSole() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fSole").src = './img/sole.jpg'
-            sole = "n"
+                    sole = "n"
                 default:
                     break;
             }
@@ -1659,8 +1676,8 @@ function elijoAle() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fAle").src = './img/ale.jpg'
-                    cantJugadoresN=3
-                    sucio="n"
+                    cantJugadoresN = 3
+                    sucio = "n"
                     break;
                 default:
                     break;
@@ -1702,16 +1719,16 @@ function elijoAle() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fAle").src = './img/ale.jpg'
-            ale = "n"
+                    ale = "n"
                 default:
                     break;
             }
         }
     }
 
-}function elijoLau4() {
+} function elijoLau4() {
     if (eligiendo == "Nosotros") {
 
 
@@ -1749,8 +1766,8 @@ function elijoAle() {
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
                     document.getElementById("fLau4").src = './img/lau4.jpg'
-                    cantJugadoresN=3
-                    sucio="n"
+                    cantJugadoresN = 3
+                    sucio = "n"
                     break;
                 default:
                     break;
@@ -1792,9 +1809,9 @@ function elijoAle() {
                     break;
                 case 4:
                     window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE=3
+                    cantJugadoresE = 3
                     document.getElementById("fLau4").src = './img/lau4.jpg'
-            lau4 = "n"
+                    lau4 = "n"
                 default:
                     break;
             }
