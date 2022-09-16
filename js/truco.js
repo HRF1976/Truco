@@ -530,8 +530,8 @@ function elijoDiego() {
 
 function elijoMono() {
     if (eligiendo == "Nosotros") {
-        if (mono != eligiendo) {
-            window.alert("Está en el otro equipo, mocasín");
+        if (mono == "Ellos") {
+            window.alert("Ya está en el otro equipo, mocasín");
 
         } else {
 
@@ -630,1192 +630,1301 @@ function elijoMono() {
 
 function elijobombita() {
     if (eligiendo == "Nosotros") {
+        if (bombita == "Ellos") {
+            window.alert("Ya está en el otro equipo, mocasín");
 
-
-        if (bombita == "s") {
-            document.getElementById("fBombita").src = './img/Bombita3.jpg'
-            bombita = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
         } else {
-            document.getElementById("fBombita").src = './img/bombitaSel.jpg'
-            bombita = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Bombita3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Bombita3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Bombita3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fBombita").src = './img/bombita3.jpg'
-                    cantJugadoresN = 3
-                    bombita = "n"
-                    break;
-                default:
-                    break;
+
+
+            if (bombita != "n") {
+                document.getElementById("fBombita").src = './img/Bombita3.jpg'
+                bombita = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fBombita").src = './img/bombitaSel.jpg'
+                bombita = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Bombita3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Bombita3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Bombita3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fBombita").src = './img/bombita3.jpg'
+                        cantJugadoresN = 3
+                        bombita = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     } else {
-        if (bombita == "s") {
-            document.getElementById("fBombita").src = './img/Bombita3.jpg'
-            bombita = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
+        if (bombita == "Nosotros") {
+            window.alert("Ya está en el otro equipo, mocasín");
 
         } else {
-            document.getElementById("fBombita").src = './img/bombitaSel.jpg'
-            bombita = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Bombita3.jpg'
-                    break;
-                case 2: RingoSel
-                    document.getElementById("e2").src = './img/Bombita3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Bombita3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    document.getElementById("fBombita").src = './img/bombita3.jpg'
-                    cantJugadoresE = 3
-                    bombita = "n"
-                default:
-                    break;
+            if (bombita != "n") {
+                document.getElementById("fBombita").src = './img/Bombita3.jpg'
+                bombita = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fBombita").src = './img/bombitaSel.jpg'
+                bombita = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/bombita3.jpg'
+                        break;
+                    case 2: RingoSel
+                        document.getElementById("e2").src = './img/bombita3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/bombita3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        document.getElementById("fBombita").src = './img/bombita3.jpg'
+                        cantJugadoresE = 3
+                        bombita = "n"
+                    default:
+                        break;
+                }
             }
         }
     }
-
 }
 
 function elijoCarlo() {
     if (eligiendo == "Nosotros") {
+        if (carlo == "Ellos") {
+            window.alert("Ya está en el otro equipo, mocasín");
 
-
-        if (carlo == "s") {
-            document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-            carlo = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
         } else {
-            document.getElementById("fCarlo").src = './img/carloSel.jpg'
-            carlo = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Carlo3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Carlo3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Carlo3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-                    cantJugadoresN = 3
-                    carlo = "n"
-                    break;
-                default:
-                    break;
+
+            if (carlo != "n") {
+                document.getElementById("fCarlo").src = './img/Carlo3.jpg'
+                carlo = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fCarlo").src = './img/carloSel.jpg'
+                carlo = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Carlo3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Carlo3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Carlo3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fCarlo").src = './img/Carlo3.jpg'
+                        cantJugadoresN = 3
+                        carlo = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     } else {
-        if (carlo == "s") {
-            document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-            carlo = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
+        if (carlo == "Nosotros") {
+            window.alert("Ya está en el otro equipo, mocasín");
 
         } else {
-            document.getElementById("fCarlo").src = './img/carloSel.jpg'
-            carlo = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Carlo3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Carlo3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Carlo3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    document.getElementById("fCarlo").src = './img/Carlo3.jpg'
-                    cantJugadoresE = 3
-                    carlo = "n"
-                default:
-                    break;
+            if (carlo != "n") {
+                document.getElementById("fCarlo").src = './img/Carlo3.jpg'
+                carlo = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fCarlo").src = './img/carloSel.jpg'
+                carlo = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Carlo3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Carlo3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Carlo3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        document.getElementById("fCarlo").src = './img/Carlo3.jpg'
+                        cantJugadoresE = 3
+                        carlo = "n"
+                    default:
+                        break;
+                }
             }
         }
-    }
 
+    }
 }
 
-function elijoMaga() {
-    if (eligiendo == "Nosotros") {
+    function elijoMaga() {
+        if (eligiendo == "Nosotros") {
+            if (maga == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
 
+            } else {
 
-        if (maga == "s") {
-            document.getElementById("fMaga").src = './img/Maga.jpg'
-            maga = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fMaga").src = './img/MagaSel.jpg'
-            maga = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Maga.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Maga.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Maga.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                if (maga != "n") {
                     document.getElementById("fMaga").src = './img/Maga.jpg'
-                    cantJugadoresN = 3
                     maga = "n"
-                    break;
-                default:
-                    break;
+                    cantJugadoresN -= 1
+                    switch (cantJugadoresN) {
+                        case 0:
+                            document.getElementById("n1").src = ''
+                            break;
+                        case 1:
+                            document.getElementById("n2").src = ''
+                            break;
+                        case 2:
+                            document.getElementById("n3").src = ''
+                            break;
+                        default:
+                            break;
+                    }
+                } else {
+                    document.getElementById("fMaga").src = './img/MagaSel.jpg'
+                    maga = eligiendo
+                    cantJugadoresN += 1
+                    switch (cantJugadoresN) {
+                        case 1:
+                            document.getElementById("n1").src = './img/Maga.jpg'
+                            break;
+                        case 2:
+                            document.getElementById("n2").src = './img/Maga.jpg'
+                            break;
+                        case 3:
+                            document.getElementById("n3").src = './img/Maga.jpg'
+                            break;
+                        case 4:
+                            window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                            document.getElementById("fMaga").src = './img/Maga.jpg'
+                            cantJugadoresN = 3
+                            maga = "n"
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
-        }
-    } else {
-        if (maga == "s") {
-            document.getElementById("fMaga").src = './img/Maga.jpg'
-            maga = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
         } else {
-            document.getElementById("fMaga").src = './img/MagaSel.jpg'
-            maga = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Maga.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Maga.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Maga.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+            if (bombita == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+                if (maga != "n") {
                     document.getElementById("fMaga").src = './img/Maga.jpg'
-                    cantJugadoresE = 3
                     maga = "n"
-                default:
-                    break;
+                    cantJugadoresE -= 1
+                    switch (cantJugadoresE) {
+                        case 0:
+                            document.getElementById("e1").src = ''
+                            break;
+                        case 1:
+                            document.getElementById("e2").src = ''
+                            break;
+                        case 2:
+                            document.getElementById("e3").src = ''
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                } else {
+                    document.getElementById("fMaga").src = './img/MagaSel.jpg'
+                    maga = eligiendo
+                    cantJugadoresE += 1
+                    switch (cantJugadoresE) {
+                        case 1:
+                            document.getElementById("e1").src = './img/Maga.jpg'
+                            break;
+                        case 2:
+                            document.getElementById("e2").src = './img/Maga.jpg'
+                            break;
+                        case 3:
+                            document.getElementById("e3").src = './img/Maga.jpg'
+                            break;
+                        case 4:
+                            window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                            document.getElementById("fMaga").src = './img/Maga.jpg'
+                            cantJugadoresE = 3
+                            maga = "n"
+                        default:
+                            break;
+                    }
+                }
             }
         }
     }
 
-}
 
-function elijoAdri() {
-    if (eligiendo == "Nosotros") {
+    function elijoAdri() {
+        if (eligiendo == "Nosotros") {
+            if (adri == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
 
+            } else {
 
-        if (adri == "s") {
-            document.getElementById("fAdri").src = './img/Adri.jpg'
-            adri = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fAdri").src = './img/AdriSel.jpg'
-            adri = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Adri.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Adri.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Adri.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                if (adri != "n") {
                     document.getElementById("fAdri").src = './img/Adri.jpg'
-                    cantJugadoresN = 3
                     adri = "n"
-                    break;
-                default:
-                    break;
+                    cantJugadoresN -= 1
+                    switch (cantJugadoresN) {
+                        case 0:
+                            document.getElementById("n1").src = ''
+                            break;
+                        case 1:
+                            document.getElementById("n2").src = ''
+                            break;
+                        case 2:
+                            document.getElementById("n3").src = ''
+                            break;
+                        default:
+                            break;
+                    }
+                } else {
+                    document.getElementById("fAdri").src = './img/AdriSel.jpg'
+                    adri = eligiendo
+                    cantJugadoresN += 1
+                    switch (cantJugadoresN) {
+                        case 1:
+                            document.getElementById("n1").src = './img/Adri.jpg'
+                            break;
+                        case 2:
+                            document.getElementById("n2").src = './img/Adri.jpg'
+                            break;
+                        case 3:
+                            document.getElementById("n3").src = './img/Adri.jpg'
+                            break;
+                        case 4:
+                            window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                            document.getElementById("fAdri").src = './img/Adri.jpg'
+                            cantJugadoresN = 3
+                            adri = "n"
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
-        }
-    } else {
-        if (adri == "s") {
-            document.getElementById("fAdri").src = './img/Adri.jpg'
-            adri = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
         } else {
-            document.getElementById("fAdri").src = './img/AdriSel.jpg'
-            adri = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Adri.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Adri.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Adri.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+            if (adri == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+                if (adri != "n") {
                     document.getElementById("fAdri").src = './img/Adri.jpg'
-                    cantJugadoresE = 3
                     adri = "n"
-                default:
-                    break;
+                    cantJugadoresE -= 1
+                    switch (cantJugadoresE) {
+                        case 0:
+                            document.getElementById("e1").src = ''
+                            break;
+                        case 1:
+                            document.getElementById("e2").src = ''
+                            break;
+                        case 2:
+                            document.getElementById("e3").src = ''
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                } else {
+                    document.getElementById("fAdri").src = './img/AdriSel.jpg'
+                    adri = eligiendo
+                    cantJugadoresE += 1
+                    switch (cantJugadoresE) {
+                        case 1:
+                            document.getElementById("e1").src = './img/Adri.jpg'
+                            break;
+                        case 2:
+                            document.getElementById("e2").src = './img/Adri.jpg'
+                            break;
+                        case 3:
+                            document.getElementById("e3").src = './img/Adri.jpg'
+                            break;
+                        case 4:
+                            window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                            document.getElementById("fAdri").src = './img/Adri.jpg'
+                            cantJugadoresE = 3
+                            adri = "n"
+                        default:
+                            break;
+                    }
+                }
             }
         }
     }
 
-}
+    function elijoLau() {
+        if (eligiendo == "Nosotros") {
+            if (lau == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
 
-function elijoLau() {
-    if (eligiendo == "Nosotros") {
+            } else {
 
-
-        if (lau == "s") {
-            document.getElementById("fLau").src = './img/Lau3.jpg'
-            lau = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fLau").src = './img/LauSel.jpg'
-            lau = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Lau3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Lau3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Lau3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fLau").src = './img/Lau3.jpg'
-                    cantJugadoresN = 3
-                    lau = "n"
-                    break;
-                default:
-                    break;
+            if (lau != "n") {
+                document.getElementById("fLau").src = './img/Lau3.jpg'
+                lau = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                
+                document.getElementById("fLau").src = './img/LauSel.jpg'
+                lau = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Lau3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Lau3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Lau3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fLau").src = './img/Lau3.jpg'
+                        cantJugadoresN = 3
+                        lau = "n"
+                        break;
+                    default:
+                        break;
+                }
             }
         }
-    } else {
-        if (lau == "s") {
-            document.getElementById("fLau").src = './img/Lau3.jpg'
-            lau = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
         } else {
-            document.getElementById("fLau").src = './img/LauSel.jpg'
-            lau = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Lau3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Lau3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Lau3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fLau").src = './img/Lau3.jpg'
-                    lau = "n"
-                default:
-                    break;
+            if (lau == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (lau != "n") {
+                document.getElementById("fLau").src = './img/Lau3.jpg'
+                lau = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fLau").src = './img/LauSel.jpg'
+                lau = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Lau3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Lau3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Lau3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fLau").src = './img/Lau3.jpg'
+                        lau = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+
+    function elijoSole2() {
+        if (eligiendo == "Nosotros") {
+            if (sole2 == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (sole2 != "n") {
+                document.getElementById("fSole2").src = './img/sole2.jpg'
+                sole2 = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fSole2").src = './img/sole2Sel.jpg'
+                sole2 = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/sole2.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/sole2.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/sole2.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fSole2").src = './img/sole2.jpg'
+                        cantJugadoresN = 3
+                        ringo = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        } else {
+            if (sole2 == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (sole2 != "n") {
+                document.getElementById("fSole2").src = './img/sole2.jpg'
+                sole2 = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fSole2").src = './img/sole2Sel.jpg'
+                sole2 = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/sole2.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/sole2.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/sole2.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fSole2").src = './img/sole2.jpg'
+                        sole2 = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+
+    function elijoNari() {
+        if (eligiendo == "Nosotros") {
+            if (nari == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (nari != "n") {
+                document.getElementById("fNari").src = './img/Nari3.jpg'
+                nari = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fNari").src = './img/NariSel.jpg'
+                nari = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Nari3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Nari3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Nari3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fNari").src = './img/Nari3.jpg'
+                        cantJugadoresN = 3
+                        nari = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+            }
+        } else {
+            if (nari == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (nari != "n") {
+                document.getElementById("fNari").src = './img/Nari3.jpg'
+                nari = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fNari").src = './img/NariSel.jpg'
+                nari = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Nari3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Nari3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Nari3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fNari").src = './img/Nari3.jpg'
+                        nari = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+
+    function elijoYo() {
+        if (eligiendo == "Nosotros") {
+            if (yo == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (yo != "n") {
+                document.getElementById("fYo").src = './img/Yo3.jpg'
+                yo = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fYo").src = './img/YoSel.jpg'
+                yo = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Yo3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Yo3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Yo3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fYo").src = './img/Yo3.jpg'
+                        cantJugadoresN = 3
+                        yo = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+            }
+        } else {
+            if (yo == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (yo != "n") {
+                document.getElementById("fYo").src = './img/Yo3.jpg'
+                yo = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fYo").src = './img/YoSel.jpg'
+                yo = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Yo3.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Yo3.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Yo3.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fYo").src = './img/Yo3.jpg'
+                        yo = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+    function elijoLucho() {
+        if (eligiendo == "Nosotros") {
+            if (lucho == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (lucho != "n") {
+                document.getElementById("fLucho").src = './img/Lucho.jpg'
+                lucho = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fLucho").src = './img/LuchoSel.jpg'
+                lucho = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Lucho.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Lucho.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Lucho.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fLucho").src = './img/Lucho.jpg'
+                        cantJugadoresN = 3
+                        lucho = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+            }
+        } else {
+            if (lucho == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (lucho != "n") {
+                document.getElementById("fLucho").src = './img/Lucho.jpg'
+                lucho = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fLucho").src = './img/LuchoSel.jpg'
+                lucho = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Lucho.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Lucho.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Lucho.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fLucho").src = './img/Lucho.jpg'
+                        lucho = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+    function elijoSucio() {
+        if (eligiendo == "Nosotros") {
+            if (sucio == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (sucio != "n") {
+                document.getElementById("fSucio").src = './img/Sucio.jpg'
+                sucio = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fSucio").src = './img/SucioSel.jpg'
+                sucio = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/Sucio.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/Sucio.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/Sucio.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fSucio").src = './img/Sucio.jpg'
+                        cantJugadoresN = 3
+                        sucio = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        } else {
+            if (sucio == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (sucio != "n") {
+                document.getElementById("fSucio").src = './img/Sucio.jpg'
+                sucio = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fSucio").src = './img/SucioSel.jpg'
+                sucio = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/Sucio.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/Sucio.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/Sucio.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fSucio").src = './img/Sucio.jpg'
+                        sucio = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+
+    function elijoSole() {
+        if (eligiendo == "Nosotros") {
+            if (sole == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (sole != "n") {
+                document.getElementById("fSole").src = './img/sole.jpg'
+                sole = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fSole").src = './img/soleSel.jpg'
+                sole = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/sole.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/sole.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/sole.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fSole").src = './img/sole.jpg'
+                        cantJugadoresN = 3
+                        sucio = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+            }
+        } else {
+            if (sole == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (sole != "n") {
+                document.getElementById("fSole").src = './img/sole.jpg'
+                sole = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fSole").src = './img/soleSel.jpg'
+                sole = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/sole.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/sole.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/sole.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fSole").src = './img/sole.jpg'
+                        sole = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    }
+
+    function elijoAle() {
+        if (eligiendo == "Nosotros") {
+            if (ale == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (ale != "n") {
+                document.getElementById("fAle").src = './img/ale.jpg'
+                ale = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fAle").src = './img/aleSel.jpg'
+                ale = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/ale.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/ale.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/ale.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fAle").src = './img/ale.jpg'
+                        cantJugadoresN = 3
+                        sucio = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+            }
+        } else {
+            if (ale == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (ale != "n") {
+                document.getElementById("fAle").src = './img/ale.jpg'
+                ale = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fAle").src = './img/aleSel.jpg'
+                ale = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/ale.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/ale.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/ale.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fAle").src = './img/ale.jpg'
+                        ale = "n"
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+    } function elijoLau4() {
+        if (eligiendo == "Nosotros") {
+            if (lau4 == "Ellos") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+
+            if (lau4 != "n") {
+                document.getElementById("fLau4").src = './img/lau4.jpg'
+                lau4 = "n"
+                cantJugadoresN -= 1
+                switch (cantJugadoresN) {
+                    case 0:
+                        document.getElementById("n1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("n2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("n3").src = ''
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                document.getElementById("fLau4").src = './img/lau4Sel.jpg'
+                lau4 = eligiendo
+                cantJugadoresN += 1
+                switch (cantJugadoresN) {
+                    case 1:
+                        document.getElementById("n1").src = './img/lau4.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("n2").src = './img/lau4.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("n3").src = './img/lau4.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
+                        document.getElementById("fLau4").src = './img/lau4.jpg'
+                        cantJugadoresN = 3
+                        lau4 = "n"
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        } else {
+            if (lau4 == "Nosotros") {
+                window.alert("Ya está en el otro equipo, mocasín");
+
+            } else {
+            if (lau4 != "n") {
+                document.getElementById("fLau4").src = './img/lau4.jpg'
+                lau4 = "n"
+                cantJugadoresE -= 1
+                switch (cantJugadoresE) {
+                    case 0:
+                        document.getElementById("e1").src = ''
+                        break;
+                    case 1:
+                        document.getElementById("e2").src = ''
+                        break;
+                    case 2:
+                        document.getElementById("e3").src = ''
+                        break;
+
+                    default:
+                        break;
+                }
+
+            } else {
+                document.getElementById("fLau4").src = './img/lau4Sel.jpg'
+                lau4 = eligiendo
+                cantJugadoresE += 1
+                switch (cantJugadoresE) {
+                    case 1:
+                        document.getElementById("e1").src = './img/lau4.jpg'
+                        break;
+                    case 2:
+                        document.getElementById("e2").src = './img/lau4.jpg'
+                        break;
+                    case 3:
+                        document.getElementById("e3").src = './img/lau4.jpg'
+                        break;
+                    case 4:
+                        window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
+                        cantJugadoresE = 3
+                        document.getElementById("fLau4").src = './img/lau4.jpg'
+                        lau4 = "n"
+                    default:
+                        break;
+                }
             }
         }
     }
 
-}
-
-function elijoSole2() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (sole == "s") {
-            document.getElementById("fSole2").src = './img/sole2.jpg'
-            sole = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fSole2").src = './img/sole2Sel.jpg'
-            sole = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/sole2.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/sole2.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/sole2.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fSole2").src = './img/sole2.jpg'
-                    cantJugadoresN = 3
-                    ringo = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (sole == "s") {
-            document.getElementById("fSole2").src = './img/sole2.jpg'
-            sole = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fSole2").src = './img/sole2Sel.jpg'
-            sole = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/sole2.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/sole2.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/sole2.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fSole2").src = './img/sole2.jpg'
-                    sole = "n"
-                default:
-                    break;
-            }
-        }
     }
-
-}
-
-function elijoNari() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (nari == "s") {
-            document.getElementById("fNari").src = './img/Nari3.jpg'
-            nari = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fNari").src = './img/NariSel.jpg'
-            nari = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Nari3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Nari3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Nari3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fNari").src = './img/Nari3.jpg'
-                    cantJugadoresN = 3
-                    nari = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (nari == "s") {
-            document.getElementById("fNari").src = './img/Nari3.jpg'
-            nari = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fNari").src = './img/NariSel.jpg'
-            nari = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Nari3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Nari3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Nari3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fNari").src = './img/Nari3.jpg'
-                    nari = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
-
-function elijoYo() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (yo == "s") {
-            document.getElementById("fYo").src = './img/Yo3.jpg'
-            yo = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fYo").src = './img/YoSel.jpg'
-            yo = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Yo3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Yo3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Yo3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fYo").src = './img/Yo3.jpg'
-                    cantJugadoresN = 3
-                    yo = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (yo == "s") {
-            document.getElementById("fYo").src = './img/Yo3.jpg'
-            yo = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fYo").src = './img/YoSel.jpg'
-            yo = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Yo3.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Yo3.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Yo3.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fYo").src = './img/Yo3.jpg'
-                    yo = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
-function elijoLucho() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (lucho == "s") {
-            document.getElementById("fLucho").src = './img/Lucho.jpg'
-            lucho = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fLucho").src = './img/LuchoSel.jpg'
-            lucho = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Lucho.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Lucho.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Lucho.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fLucho").src = './img/Lucho.jpg'
-                    cantJugadoresN = 3
-                    lucho = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (lucho == "s") {
-            document.getElementById("fLucho").src = './img/Lucho.jpg'
-            lucho = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fLucho").src = './img/LuchoSel.jpg'
-            lucho = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Lucho.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Lucho.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Lucho.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fLucho").src = './img/Lucho.jpg'
-                    lucho = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
-function elijoSucio() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (sucio == "s") {
-            document.getElementById("fSucio").src = './img/Sucio.jpg'
-            sucio = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fSucio").src = './img/SucioSel.jpg'
-            sucio = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/Sucio.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/Sucio.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/Sucio.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fSucio").src = './img/Sucio.jpg'
-                    cantJugadoresN = 3
-                    sucio = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (sucio == "s") {
-            document.getElementById("fSucio").src = './img/Sucio.jpg'
-            sucio = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fSucio").src = './img/SucioSel.jpg'
-            sucio = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/Sucio.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/Sucio.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/Sucio.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fSucio").src = './img/Sucio.jpg'
-                    sucio = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
-
-function elijoSole() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (sole == "s") {
-            document.getElementById("fSole").src = './img/sole.jpg'
-            sole = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fSole").src = './img/soleSel.jpg'
-            sole = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/sole.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/sole.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/sole.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fSole").src = './img/sole.jpg'
-                    cantJugadoresN = 3
-                    sucio = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (sole == "s") {
-            document.getElementById("fSole").src = './img/sole.jpg'
-            sole = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fSole").src = './img/soleSel.jpg'
-            sole = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/sole.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/sole.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/sole.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fSole").src = './img/sole.jpg'
-                    sole = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
-
-function elijoAle() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (ale == "s") {
-            document.getElementById("fAle").src = './img/ale.jpg'
-            ale = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fAle").src = './img/aleSel.jpg'
-            ale = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/ale.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/ale.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/ale.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fAle").src = './img/ale.jpg'
-                    cantJugadoresN = 3
-                    sucio = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (ale == "s") {
-            document.getElementById("fAle").src = './img/ale.jpg'
-            ale = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fAle").src = './img/aleSel.jpg'
-            ale = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/ale.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/ale.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/ale.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fAle").src = './img/ale.jpg'
-                    ale = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-} function elijoLau4() {
-    if (eligiendo == "Nosotros") {
-
-
-        if (lau4 == "s") {
-            document.getElementById("fLau4").src = './img/lau4.jpg'
-            lau4 = "n"
-            cantJugadoresN -= 1
-            switch (cantJugadoresN) {
-                case 0:
-                    document.getElementById("n1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("n2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("n3").src = ''
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            document.getElementById("fLau4").src = './img/lau4Sel.jpg'
-            lau4 = "s"
-            cantJugadoresN += 1
-            switch (cantJugadoresN) {
-                case 1:
-                    document.getElementById("n1").src = './img/lau4.jpg'
-                    break;
-                case 2:
-                    document.getElementById("n2").src = './img/lau4.jpg'
-                    break;
-                case 3:
-                    document.getElementById("n3").src = './img/lau4.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede papá.")
-                    document.getElementById("fLau4").src = './img/lau4.jpg'
-                    cantJugadoresN = 3
-                    sucio = "n"
-                    break;
-                default:
-                    break;
-            }
-        }
-    } else {
-        if (lau4 == "s") {
-            document.getElementById("fLau4").src = './img/lau4.jpg'
-            lau4 = "n"
-            cantJugadoresE -= 1
-            switch (cantJugadoresE) {
-                case 0:
-                    document.getElementById("e1").src = ''
-                    break;
-                case 1:
-                    document.getElementById("e2").src = ''
-                    break;
-                case 2:
-                    document.getElementById("e3").src = ''
-                    break;
-
-                default:
-                    break;
-            }
-
-        } else {
-            document.getElementById("fLau4").src = './img/lau4Sel.jpg'
-            lau4 = "s"
-            cantJugadoresE += 1
-            switch (cantJugadoresE) {
-                case 1:
-                    document.getElementById("e1").src = './img/lau4.jpg'
-                    break;
-                case 2:
-                    document.getElementById("e2").src = './img/lau4.jpg'
-                    break;
-                case 3:
-                    document.getElementById("e3").src = './img/lau4.jpg'
-                    break;
-                case 4:
-                    window.alert("No sabés jugar al truco? Más de 3 no se puede, papá...")
-                    cantJugadoresE = 3
-                    document.getElementById("fLau4").src = './img/lau4.jpg'
-                    lau4 = "n"
-                default:
-                    break;
-            }
-        }
-    }
-
-}
