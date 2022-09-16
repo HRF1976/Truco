@@ -880,7 +880,7 @@ function elijoCarlo() {
                 }
             }
         } else {
-            if (bombita == "Ellos") {
+            if (maga == "Ellos") {
                 window.alert("Ya está en el otro equipo, mocasín");
 
             } else {
